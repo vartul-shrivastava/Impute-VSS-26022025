@@ -1,26 +1,18 @@
 import os
-# Removed deep learning related libraries: tensorflow and keras.
-from sklearn.ensemble import RandomForestRegressor
-import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-
-from sklearn.preprocessing import MinMaxScaler
-import io
+import webview
 import json
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.svm import SVR
-import base64
-import re
-import subprocess 
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request, jsonify, make_response, session
-from scipy.stats import gaussian_kde, skew, kurtosis, ks_2samp
+
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from sklearn.svm import SVR
 from sklearn.experimental import enable_iterative_imputer  # noqa
 from sklearn.impute import KNNImputer, IterativeImputer
 from sklearn.preprocessing import LabelEncoder
 
-from bs4 import BeautifulSoup
+from flask import Flask, render_template, request, jsonify, make_response, session
+from scipy.stats import gaussian_kde, skew, kurtosis, ks_2samp
 import psutil
 # -------------------------------------------------
 # Flask Setup and Directories
@@ -59,11 +51,6 @@ data_store = {
     "pipeline_steps": []          # Pipeline steps (if needed)
 }
 
-# Note: Deep learning–based imputation functions (e.g. SDAE, MIDA) have been removed.
-
-# -------------------------------------------------
-# Helper Functions (Imputation, KDE, Stats, etc.)
-# -------------------------------------------------
 def compute_kde(values):
     if len(values) < 2:
         return [], []
@@ -733,5 +720,8 @@ def calculate_correlation():
 # -------------------------------------------------
 # Run the App
 # -------------------------------------------------
+webview.create_window('Impute-VSS', app)
+
 if __name__ == "__main__":
     app.run(debug=True)
+    webview.start()
