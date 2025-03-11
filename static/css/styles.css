@@ -12,24 +12,21 @@
       display: none;
     }
     
-    /* Demonstrate a "mostly customized" scrollbar
-     * (won't be visible otherwise if width/height is specified) */
 -webkit-scrollbar {
       width: 5px;
       height: 8px;
       background-color: #aaa; /* or add it to the track */
     }
     
-    /* Add a thumb */
 -webkit-scrollbar-thumb {
       background: #000;
     }
     
     .sub-tab-content {
-      height: 100%; /* Make sure the chart fits its container */
+      height: 100%; 
       max-height: 100%;
       padding: 10px;
-      box-sizing: border-box; /* Ensure padding is accounted for in size */
+      box-sizing: border-box; 
       overflow: hidden;
     }
     
@@ -45,17 +42,17 @@
 .charts-container {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure the container takes the available height */
+  height: 100%;
 }
 
 
 .graph {
   align-items: center;
   margin: 0 0;
-  width: 100%; /* Ensure the graph takes full width */
-  height: 100%; /* Make height responsive */
-  max-width: 550px; /* Optional: Limit max height */
-  overflow: hidden; /* Prevent overflow issues */
+  width: 100%; 
+  height: 100%; 
+  max-width: 550px; 
+  overflow: hidden; 
 }
     
 
@@ -147,7 +144,7 @@
     /* Loading Overlay Styling */
 .loading-overlay {
   background-image: url('/static/images/impute-vss-bg.png');
-  background-size: cover; /* Ensures the image covers the entire background */
+  background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Keeps the image fixed during scrolling */
@@ -158,7 +155,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
-  z-index: 1200; /* make sure it appears over other elements */
+  z-index: 1200; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,7 +163,7 @@
 
 .loading-content {
   background-image: url('/static/images/impute-vss-bg.png');
-  background-size: cover; /* Ensures the image covers the entire background */
+  background-size: cover;
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Keeps the image fixed during scrolling */
@@ -175,7 +172,6 @@
   text-align: center;
 }
 
-/* Optional Spinner Styling */
 .spinner {
   margin: 20px auto;
   width: 40px;
@@ -195,7 +191,7 @@
 .greeting-overlay {
   backdrop-filter: blur(10px); /* Adds a blur effect to the overlay */
   background-image: url('/static/images/impute-vss-bg.png');
-  background-size: cover; /* Ensures the image covers the entire background */
+  background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Keeps the image fixed during scrolling */
@@ -205,7 +201,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-  z-index: 1300; /* Ensure it is above other overlays */
+  z-index: 1300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,7 +209,7 @@
 
 .greeting-content {
   background-image: url('/static/images/impute-vss-bg.png');
-  background-size: cover; /* Ensures the image covers the entire background */
+  background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Keeps the image fixed during scrolling */
@@ -257,7 +253,7 @@
   text-align: center;
   font-size: 1.2rem;
   color: #333;
-  z-index: 100; /* make sure it's above the background, but below any overlays */
+  z-index: 100; 
 }
 
 /* This targets the main Plotly SVG element */
@@ -371,7 +367,7 @@
     .table-container {
       color: #1a1a1a;
       flex: 1;
-      max-height: 450px;
+      max-height: 350px;
       border: 1px solid rgba(255,255,255,0.3);
       border-radius: 8px;
       position: sticky;
@@ -420,7 +416,7 @@
       background: rgba(255,255,255,0.6);
       backdrop-filter: blur(10px);
       border-top: 1px solid rgba(255,255,255,0.3);
-      padding: 15px;
+      padding: 0 15px;
       z-index: 500;
       display: flex;
       align-items: center;
@@ -493,7 +489,6 @@
     }
 
 
-    /* Ensure the charts fit the container */
 .charts-container {
   flex: 1;
   display: flex;
@@ -521,7 +516,7 @@
 
 .plot-container {
   width: 100%;
-  height: 100%; /* Ensure the plot fills the available space */
+  height: 100%;
   max-height: 100%;
 }
 /* NAVBAR STYLING */
@@ -617,7 +612,7 @@
   color: #333;
 }
 
-/* --- Optional: Different Colors for Different Stats --- */
+
 #ramUtilizationBar {
   background-color: linear-gradient(135deg, #f9f9f9, #004aad);
 }
@@ -701,7 +696,7 @@ select:disabled {
   cursor: not-allowed; /* Indicate it's disabled */
 }
 
-/* Optional: Add styles for options within the select */
+
 option {
   font-size: 1rem; /* Match font size */
   padding: 8px; /* Add padding for better readability */
@@ -729,7 +724,7 @@ table {
 
 /* Style for the table header */
 table thead tr {
-  background-color: #577fae; /* change to your preferred header color */
+  background-color: #577fae; 
   color: #ffffff;
   text-align: center;
 }
@@ -762,7 +757,6 @@ table tbody td {
   border: 1px solid #ddd;
 }
 
-/* Optional: Add a subtle box shadow */
 table {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -875,7 +869,7 @@ table {
 .ai-overlay-content {
   backdrop-filter: blur(10px); /* Adds a blur effect to the overlay */
   background-image: url('/static/images/impute-vss-bg.png');
-  background-size: cover; /* Ensures the image covers the entire background */
+  background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Keeps the image fixed during scrolling */

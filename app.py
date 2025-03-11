@@ -7,19 +7,15 @@ import pandas as pd
 
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.svm import SVR
-from sklearn.experimental import enable_iterative_imputer  # noqa
+from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import KNNImputer, IterativeImputer
 from sklearn.preprocessing import LabelEncoder
 
 from flask import Flask, render_template, request, jsonify, make_response, session
 from scipy.stats import gaussian_kde, skew, kurtosis, ks_2samp
 import psutil
-# -------------------------------------------------
-# Flask Setup and Directories
-# -------------------------------------------------
-app = Flask(__name__)
-app.secret_key = "your_default_secret_key"  # Replace with a secure key
 
+app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
 PIPELINE_SAVE_DIR = "pipeline_data"
 PROJECTS_SAVE_DIR = "projects"
@@ -576,7 +572,7 @@ def impute_route():
         if col not in df.columns:
             return jsonify({"error": f"Column '{col}' not found."}), 400
         original_col = df[col].copy()
-        if original_col.isna().sum() == 0 and method != "complete-case":
+        if original_col.isna().sum() == 0:
             return jsonify({"error": f"No missing values in column '{col}'."}), 400
 
         # Start timer before imputation
