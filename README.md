@@ -35,8 +35,8 @@ Impute-VSS is a web-based solution engineered to address the intricate challenge
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/vartul-shrivastava/ImputeVSS-16012025.git
-   cd ImputeVSS-16012025
+   git clone https://github.com/vartul-shrivastava/Impute-VSS-26022025.git
+   cd Impute-VSS-26022025
 2. **Install Dependencies**: Ensure you have Python 3.12.3 or above installed. Then run:
    ```bash
       pip install -r requirements.txt
